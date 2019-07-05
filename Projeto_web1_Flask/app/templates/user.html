@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Informações Usuário - {{ user.username}}
+{% endblock %}
+
+{% block page_content %}
+    <br>    
+    <h3>Usuário: {{ user.username }}</h3>
+    
+    {% if current_user.is_administrator() %}
+        {% if user.role.name %}
+        <h4> Permissão Tipo: {{ user.role.name }}</h4>
+        {% endif %}
+    {% endif %}
+
+    {% if user == current_user %}
+        <a href="{{ url_for('.edit_profile') }}" class="btn bg-primary text-white">Editar</a>
+    {% endif %}
+    {% if current_user.is_administrator() %}
+        <a href="{{ url_for('.edit_profile_admin', id=user.id) }}" class="btn btn-danger">
+            Editar [ADMIN]
+        </a>
+    {% endif %}
+
+    {% if current_user.has_permission(1) and user != current_user %}
+        <a href="{{ url_for('.follow', username=user.username) }}" class="btn btn-primary">Follow</a>
+        <!--{% if current_user.is_following %}
+            <p>já esta seguindo</p>
+        {% endif %}-->
+    {% endif %}
+
+    {% if user.name %}
+    <p>
+        Nome: {{user.name}}
+    </p>
+    {% endif %}
+
+    {% if user.nascimento %}    
+    <p>
+        Data de Nascimento: {{user.nascimento}}         
+    </p>
+    {% endif %}
+
+    {% if user.email %}
+        <p>
+            Email: {{ user.email }}
+        </p>
+    {% endif %}
+
+    {% if user.cidade %}
+        <p>
+            Cidade de Residência: {{ user.cidade }}
+        </p>
+    {% endif %}
+
+    {% if user.about_me %}
+        <p>
+            Sobre: {{ user.about_me }}
+        </p>
+    {% endif %}
+
+    
+
+    
+{% endblock %}

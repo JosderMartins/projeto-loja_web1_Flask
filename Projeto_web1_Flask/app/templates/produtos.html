@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+
+
+<h1>Lista de Produtos</h1>
+
+    <body>
+
+        <div class="row">
+            <div class="col-md-12">
+                    <br>
+                    <table border="1">
+                    <caption></caption>
+        
+                    <colgroup>
+                        <col width="16%">
+                        <col width="15%">
+                        <col width="15%">
+                        <col width="15%">
+                        <col width="15%">
+                        
+                    </colgroup>
+        
+                    <thead><!--cabeçalho tabela--> 
+                        <tr>
+                            <th colspan="6">Produtos</th><!--colspan serve para mesclar linhas-->
+                        </tr>
+                        <tr bgcolor="lightblue" align="center">
+                            <th>Imagem Produto</th>
+                            <th>Produto</th>
+                            <th>Autor/Distribuidora</th>
+                            <th>Preço</th>
+                            <th>Quantidade em Estoque</th>				
+                        </tr>
+                    </thead>
+        
+                    <tbody>	                      
+                        
+                        
+                        {% for produto in produtos %}
+                        <tr align="center">                            
+                            <td><a href="/detalhes_produto/{{ produto.id }}"><img src="static/img/{{ produto.prod_arquivo }}" width="150px" height="230px"></a></td>
+                            <td>{{ produto.prod_nome }}</td>
+                            <td>{{ produto.prod_autor }}</td>
+                            <td>{{ produto.prod_preco }}</td>
+                            <td>{{ produto.prod_estoque }} unidade(s)</td>
+                        </tr>
+                        {% endfor %}
+                            
+                        
+
+                    </tbody>
+                </table> 
+                
+            </div>
+        
+        </div>
+        
+    </body>
+
+{% endblock %}

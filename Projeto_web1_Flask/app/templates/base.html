@@ -1,0 +1,84 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+    Lojas Martins
+{% endblock %}
+
+{% block navbar %}
+
+<a href="/"><h1 align="center"><img src="{{url_for('static', filename='img/logo.jpg')}}"  alt="logo do portal" width="180px" ></h1></a>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand btn bg-dark" href="/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link btn bg-dark" href="/produtos">Produtos <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link btn bg-dark" href="/mais_vendidos">Itens mais vendidos</a>
+      <a class="nav-item nav-link btn bg-dark" href="/sobre">Sobre</a>
+      <a class="nav-item nav-link btn bg-dark" href="/contato">Contato</a>
+    </div>
+    <ul class="nav navbar-nav ml-auto">
+    
+    {% if current_user.is_authenticated %}        
+        <a href="/user/{{current_user.username}}" class="btn" style="background-color: #a7a7a7;">Usuário: {{current_user.username}}</a><h>&nbsp;&nbsp;</h>
+        {% if current_user.is_administrator() %}
+        <a href="/cadastro_produtos/" class="btn btn-dark text-primary">Cadastrar Produto</a><h>&nbsp;</h>
+        {% endif %}
+    {% endif %}
+    
+    </ul>
+    <ul class="nav navbar-nav ml-rith">
+    {% if current_user.is_authenticated %}
+    <li>
+        {% if current_user.is_administrator() %}            
+            <a href="{{ url_for('main.add_role') }}" class="btn bg-dark";">Roles</a>
+        {% endif %}        
+
+        <a href="{{ url_for('main.list_user') }}" class="btn bg-dark">Users</a>
+
+        <a href="{{ url_for('auth.logout') }}" class="btn bg-dark">Log out</a>
+    </li>
+    {% else %}
+    <li>
+        <a href="{{ url_for("auth.login") }}" class="btn bg-dark">
+            Log in
+        </a>
+    </li>
+    {% endif %}
+    </ul>
+  </div>
+</nav>
+
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-warning">
+                {{ message }}
+            </div>
+        {% endfor %}
+            
+        {% block page_content %}{% endblock %}
+    </div>
+    <br>
+    <div class="container" style="background-color: #a7a7a7">
+        <footer>
+            <div class="row">		
+                    <div class="col-md-4">
+                        <p>© Copyright Jósder da Silveira Martins</p> 
+                    </div>
+                    <div class="col-md-4">
+                        <p>Horário de Funcionamento loja Física: <br>Segunda a Sexta das 9:00 a 19:00 </p>
+                    </div>
+                    <div class="col-md-4">	
+                        <p><a href="/contato">Contato</a></p>
+                    </div>			
+            </div>
+        </footer>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+
+
+<br>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+            <a><img src="/static/img/{{ produto.prod_arquivo }}" width=80% height=500px></a>
+		</div>
+		<div class="col-md-6">
+            {% if produto.prod_classe %}
+                <p>                    
+                    Categoria Produto: {{produto.prod_classe}}
+                </p>
+            {% endif %}
+
+            {% if produto.prod_nome %}
+                <p>                    
+                    Produto ID: {{produto.id}}
+                </p>
+            {% endif %}
+
+            {% if produto.prod_nome %}
+                <p>                    
+                    Nome Produto: {{produto.prod_nome}}
+                </p>
+            {% endif %}
+
+            {% if produto.prod_autor%}
+                <p>                    
+                    Autor/Distribuidora: {{produto.prod_autor}}
+                </p>
+            {% endif %}
+
+            {% if produto.prod_estoque %}
+                <p>                    
+                    Quantidade em Estoque: {{produto.prod_estoque}} Unidade(s)
+                </p>
+            {% endif %}
+
+            {% if produto.prod_preco %}
+                <p>                    
+                    Preço: {{produto.prod_preco}}
+                </p>
+            {% endif %}
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+
+            
+
+		</div>
+	</div>
+</div>
+
+{% endblock %}

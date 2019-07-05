@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+
+
+<div class="row">
+    <div class="col-md-6">			
+            <img src="{{url_for('static', filename='img/brasao3.jpg')}}" width="50%">
+            <br><br>
+    </div>
+    <div align="justify" class="col-md-6">			
+            <p><strong>Sobre</strong></p>
+            <p>Loja fundada em 1935 por imigrantes Espanhóis, da família Martins, onde vendiam produtos dos agricultores da região de Araquari, hoje vende produtos eletrônicos, livros, jogos, etc.......
+    </div>
+</div>
+
+
+
+
+{% endblock %}

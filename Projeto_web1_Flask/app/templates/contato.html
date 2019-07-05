@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+
+<div class="row">
+		<div class="col-md-12">
+			<div align="left">				
+			<br>
+			<p><strong>Endereço:</strong> Rua Prefeito Higino Aguiar, nº 35, Araquari - SC, 89245-000</p>
+			<p><strong>Telefones:</strong> (47)3333-3333</p>
+			<p><strong>E-mail:</strong> contato@lojamartins.com.br</p>
+			<br><br>
+			</div>
+			<div align="center">
+				<form action="" method="get"> 
+					<p><strong>Entre em contato</strong></p>		
+					<p>Nome: 
+						<br>
+						<input type="text" required="required" name="nome" size=25 maxlength=30>
+					</p>
+
+					<p>E-mail para contato:
+						<br>
+						<input type="email" required="required" name="email" size=25>
+					</p>				
+					<p>Comentário:
+						<br>
+						<textarea name="comentario" required="required" cols="50" rows="5">...
+						</textarea>				
+					</p>				
+					<input type="submit" value="Enviar">
+				</form>
+				<br><br>
+			</div>	
+		</div>
+	</div>
+
+
+{% endblock %}

@@ -1,0 +1,288 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "_macros.html" as macros %}
+
+{% block page_content %}
+
+
+<div class="row">
+		<div class="col-md-12">
+			<div class="carousel slide" id="carousel-121762">
+				<ol class="carousel-indicators">
+					<li data-slide-to="0" data-target="#carousel-121762" class="active">
+					</li>
+					<li data-slide-to="1" data-target="#carousel-121762">
+					</li>
+					<li data-slide-to="2" data-target="#carousel-121762">
+					</li>
+					</li>
+					<li data-slide-to="3" data-target="#carousel-121762">
+					</li>
+					</li>
+					<li data-slide-to="4" data-target="#carousel-121762">
+					</li>					
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap First" src="{{url_for('static', filename='img/c1.png')}}" height="550"></a>
+						<div class="carousel-caption">
+							<h4>
+								<a class="btn text-dark bg-light" href="/produtos">Eletrônicos</a>
+							</h4>
+							<p>
+								...
+							</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap Second" src="{{url_for('static', filename='img/jogos.jpg')}}" height="550"></a>
+						<div class="carousel-caption">
+							<h4 >
+								<a class="btn text-dark bg-light" href="/produtos">Jogos</a>								
+							</h4>
+							<p>
+								...
+							</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap Third" src="{{url_for('static', filename='img/c3.jpg')}}" height="550"></a>
+						<div class="carousel-caption">
+							<h4>
+								<a class="btn text-dark bg-light" href="/produtos">Livros</a>								
+							</h4>
+							<p>
+								...
+							</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap four" src="{{url_for('static', filename='img/c4.jpg')}}" height="550"></a>
+						<div class="carousel-caption">
+							<h4>
+								<a class="btn text-dark bg-light" href="/produtos">Quadrinhos</a>
+							</h4>
+							<p>
+								...
+							</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap five" src="{{url_for('static', filename='img/c5.jpg')}}" height="550"></a>
+						<div class="carousel-caption">
+							<h4>
+								<a class="btn text-dark bg-light" href="/produtos">Componentes Eletrônicos</a>
+							</h4>
+							<p>
+								...
+							</p>
+						</div>
+					</div>				
+				</div> <a class="carousel-control-prev" href="#carousel-121762" data-slide="prev"><span class="carousel-control-prev-icon bg-dark"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-121762" data-slide="next"><span class="carousel-control-next-icon bg-dark"></span> <span class="sr-only">Next</span></a>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card">
+						<a href="/produtos"><img class="card-img-top" alt="Bootstrap Thumbnail First" src="{{url_for('static', filename='img/jogo2.webp')}}" height="250" width="280px"></a>
+						<div class="card-block">
+							<h5 class="card-title">
+								Promoção da Franquia de Jogos Resident Evil
+							</h5>
+							<p class="card-text">
+								Resident Evil a franquia classica de Survival Horror está em Promoção............
+							</p>
+							<p>
+								<a class="btn btn-primary" href="/produtos">Vizualizar</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+						<a href="/produtos"><img class="card-img-top" alt="Bootstrap Thumbnail Second" src="{{url_for('static', filename='img/livro10.jpg')}}" height="250"></a>
+						<div class="card-block">
+							<h5 class="card-title">
+								Promoção Livros de Game of Thrones
+							</h5>
+							<p class="card-text">
+								Em Março promoção de livros de Game Of Thrones...........
+							</p>
+							<p>
+								<a class="btn btn-primary" href="/produtos">Vizualizar</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card">
+						<a href="/produtos"><img class="card-img-top" alt="Bootstrap Thumbnail Third" src="{{url_for('static', filename='img/asus.jpg')}}" height="250"></a>
+						<div class="card-block">
+							<h5 class="card-title">
+								Promoção de Notebooks
+							</h5>
+							<p class="card-text">
+								Notebooks das Marcas Samsung, Acer, Asus......
+							</p>
+							<p>
+								<a class="btn btn-primary" href="/produtos">Vizualizar</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="jumbotron">
+				<h2>
+					Itens Mais Vendidos
+				</h2>
+				<p>
+					<ol>  
+						<li><a href="/produtos"> Livro a Viagem ao Centro da Terra</a></li>
+						<li><a href="/produtos"> Jogo Batman Arkham City</a></li>
+						<li><a href="/produtos"> Jogo Fallout 4</a></li>
+						<li><a href="/produtos"> Livro Harry potter e a Câmara Secreta </a></li>
+						<li><a href="/produtos"> Notebook Asus</a></li>
+					</ol>
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="/produtos">Veja Lista Completa</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+		<br>
+			<h3>Dica de Leitura</h3>
+			<h5>Livro A Viagem ao Centro da Terra</h5>
+			<h6>Autor: Júlio Verne</h6>
+			<p align="justify">Em 1863, pleno século XIX, o renomado cientista e professor de geologia e mineralogia alemão, Otto Lidenbrock, após ter encontrado um manuscrito escrito em código rúnico pelo antigo alquimista islandês do século XVI, Arne Saknussemm, e de o ter decifrado, ele descobre que, segundo o alquimista, quem desce a cratera do vulcão Sneffels, situado na Islândia, antes do início de julho, se chega ao centro da Terra; sendo que Saknussemm teria feito esse percurso.
+
+			Querendo também realizar tal feito “impossível”, ele e o seu sobrinho Axel, um jovem órfão que mora com o professor e mantêm um romance com sua afilhada, Grauben; partiram para a Islândia com o intuito de penetrar no interior da crosta terrestre. Depois de chegada à Islândia, o Prof. Lidenbrock contratou um caçador de gansos islandês, Hans Bjelke, para servir-lhes de guia até o vulcão e de ajudante na sua longa jornada no interior da Terra. Já abaixo da superfície terrestre, estes três homens desceram corredores e galerias, passando por vários obstáculos e empecilhos, como por exemplo: falta de água, falta de comida, a perda de Axel, entre outros... Até que chegaram a uma galeria de dimensões colossais que continha no seu interior um oceano, ilhas, nuvens e até mesmo luz, gerada por um fenômeno elétrico desconhecido.</p>
+		</div>
+		<div class="col-md-4" align="center">
+			<a href="/produtos"><img src="{{url_for('static', filename='img/livro_julio_verne.jpg')}}" width="300xp" height="450px"></a>
+			<br>
+			<a class="botao" href="/produtos">Vizualizar</a>
+			<br><br>
+		</div>		
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+		<br><br>
+			<h3>Dica de Jogo</h3>
+			<h5>Batman: Arkham Knight</h5>
+			<h6>Rocksteady Studios</h6>
+			<p align="justify"> É o último jogo da franquia Arkham produzido pela Rocksteady Studios. O game leva o Cavaleiro das Trevas para a nova geração de consoles, como Xbox One, PS4 e PC, e a sua data de lançamento foi em junho de 2015. A história do título acontece um ano depois de Arkham City e o homem-morcego precisa enfrentar Scarecrow. O vilão está no comando de vários inimigos tradicionais do Batman, incluindo Duas-Caras, Pinguim, Charada e Harley Quiin (Arlequina), todos dispostos a caçá-lo. Porém, diferente de Arkham Origins, o protagonista está no ápice das suas habilidades. Batman: Arkham Knight ganhou uma edição de colecionador, com uma réplica em menor escala do Batmóvel, veículo utilizado pelo herói na aventura. Red hood, ou Capuz Vermelho, também está presente no jogo no título e apareceu em um trailer do DLC. No game, o Homem-Morcego tem como aliados Robin, Asa Noturna e Catwoman (Mulher-Gato). Com o modo cooperativo, chamado de “Dual Play”, um jogador pode controlar o Batman e o outro um de seus aliados. Confira os easter eggs da série Batman Arkham. Além disso, o título tem armas secretas, e uma delas é o raio congelante do Sr. Frio.</p>
+		</div>
+		<div class="col-md-4" align="center">
+			<a href="/produtos"><img src="{{url_for('static', filename='img/batman.png')}}" width="300xp" height="480px"></a>
+			<br>
+			<a class="botao" href="/produtos">Vizualizar</a>
+			<br><br>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="carousel slide" id="carousel-1217623">
+				<ol class="carousel-indicators">
+					<li data-slide-to="0" data-target="#carousel-1217623" class="active">
+					</li>
+					<li data-slide-to="1" data-target="#carousel-1217623">
+					</li>
+					<li data-slide-to="2" data-target="#carousel-1217623">
+					</li>										
+				</ol>
+				<h3>Livros</h3>
+				<div class="carousel-inner">					
+					<div class="carousel-item active">
+						<a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap First" src="{{url_for('static', filename='img/livro1.jpg')}}" width="1%" height="150px"></a>
+                        <div class="carousel-caption">							
+							
+						</div>
+					</div>
+					<div class="carousel-item">
+						<a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap First" src="{{url_for('static', filename='img/livro4.jpg')}}" width="1%" height="150px"></a>
+						<div class="carousel-caption">
+							
+						</div>
+					</div>
+					<div class="carousel-item">
+						<a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap First" src="{{url_for('static', filename='img/livro7.jpg')}}" width="10px" height="150px"></a>
+						<div class="carousel-caption">
+							
+						</div>
+					</div>								
+				</div> <a class="carousel-control-prev" href="#carousel-1217623" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-1217623" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
+			</div>	
+
+		</div><!--FIM DA DIV 4-->
+		<div class="col-md-4">
+			<div class="carousel slide" id="carousel-12176234">
+				<ol class="carousel-indicators">
+					<li data-slide-to="0" data-target="#carousel-12176234" class="active">
+					</li>
+					<li data-slide-to="1" data-target="#carousel-12176234">														
+				</ol>
+				<h3>Jogos</h3>
+				<div class="carousel-inner">					
+					<div class="carousel-item active">
+						<a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap First" src="{{url_for('static', filename='img/jogo1.jpg')}}" height="150px"></a>						
+						<div class="carousel-caption">							
+							
+						</div>
+					</div>
+					<div class="carousel-item">
+                        <a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap First" src="{{url_for('static', filename='img/jogo1.jpg')}}" height="150px"></a>	
+						<div class="carousel-caption">
+							
+						</div>
+					</div>
+													
+				</div> <a class="carousel-control-prev" href="#carousel-12176234" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-12176234" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
+			</div>	
+		</div>
+		<div class="col-md-4">
+		<div class="carousel slide" id="carousel-1217622">
+				<ol class="carousel-indicators">
+					<li data-slide-to="0" data-target="#carousel-1217622" class="active">
+					</li>
+					<li data-slide-to="1" data-target="#carousel-1217622">
+					</li>
+					<li data-slide-to="2" data-target="#carousel-1217622">
+					</li>										
+				</ol>
+				<h3>Livros</h3>
+				<div class="carousel-inner">					
+					<div class="carousel-item active">
+						<a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap First" src="{{url_for('static', filename='img/livro6.jpg')}}" width="10px" height="150px"></a>
+						<div class="carousel-caption">
+							
+						</div>
+					</div>
+					<div class="carousel-item ">
+						<a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap First" src="{{url_for('static', filename='img/livro3.jpg')}}" width="10px" height="150px"></a>
+						<div class="carousel-caption">							
+							
+						</div>
+					</div>
+					<div class="carousel-item">
+						<a href="/produtos"><img class="d-block w-100" alt="Carousel Bootstrap First" src="{{url_for('static', filename='img/livro9.jpg')}}" width="10px" height="150px"></a>
+						<div class="carousel-caption">
+							
+						</div>
+					</div>								
+				</div> <a class="carousel-control-prev" href="#carousel-1217622" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-1217622" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
+			</div>	
+
+		</div>
+		</div>
+	</div>
+	<br>
+{% endblock %}

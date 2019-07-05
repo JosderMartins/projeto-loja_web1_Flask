@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <br>
+        <table border="1">
+        <caption></caption>
+
+        <colgroup>
+            <col width="10%">
+            <col width="15%">
+            <col width="15%">
+            <col width="15%">
+            <col width="15%">
+
+            
+        </colgroup>
+
+        <thead><!--cabeçalho tabela--> 
+            <tr>
+                <th colspan="6">Produtos Mais Vendidos no ano de 2018</th><!--colspan serve para mesclar linhas-->
+            </tr>
+        <tr bgcolor="lightblue">
+            <th>Imagem Produto</th>
+            <th>Produto</th>
+            <th>Autor/Distribuidora</th>
+            <th>Quantidade Vendida</th>
+            <th>Quantidade em Estoque</th>				
+        </tr>
+        </thead>
+
+        <tbody>	
+
+        <tr align="center">
+            <td><a href="/produtos"><img src="{{url_for('static', filename='img/livro_julio_verne.jpg')}}" width="150px" height="230px"></a></td>
+            <td>Livro Viagem ao centro da Terra</td>
+            <td>Julio Verne</td>
+            <td>170 unidades</td>
+            <td>150 unidades</td>				
+        </tr>		
+
+        <tr align="center">
+            <td><a href="/produtos"><img src="{{url_for('static', filename='img/batman.png')}}" width="140px" height="230px"></a></td>
+            <td>Jogo Batman Arkham Knight</td>
+            <td>Rocksteady</td>
+            <td>150 unidades</td>
+            <td>25 unidades</td>				
+        </tr>
+
+        <tr align="center">
+            <td><a href="/produtos"><img src="{{url_for('static', filename='img/fallout4.jpg')}}" width="190px" height="230px"></a></td>
+            <td>Jogo Fallout 4</td>
+            <td>Bethesda</td>				
+            <td>127 unidades</td>
+            <td>120 unidades</td>				
+        </tr>
+        <tr align="center">
+            <td><a href="/produtos"><img src="{{url_for('static', filename='img/livro7.jpg')}}" width="150px" height="230px"></a></td>
+            <td>Livro Harry potter e a Câmara Secreta</td>
+            <td>J. K. Rowling</td>
+            <td>100 unidades</td>
+            <td>10 unidades</td>				
+        </tr>
+        <tr align="center">
+            <td><a href="/produtos"><img src="{{url_for('static', filename='img/asus.jpg')}}" width="220px" height="230px"></a></td>
+            <td>Notebook Asus</td>
+            <td>Asus</td>
+            <td>75 unidades</td>
+            <td>15 unidades</td>				
+        </tr>
+
+        </tbody>
+    </table> 
+        
+    </div>
+
+</div>
+
+
+
+{% endblock %}

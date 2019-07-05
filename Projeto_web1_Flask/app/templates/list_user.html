@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+    <h1>Listagem de Usuários</h1>
+    <ul>
+        {% for user in users %}
+            <li> 
+                <a class="btn text-white bg-secondary" href="/user/{{ user.username}}">
+                {{ user.username }} - {{ user.role.name }}
+                </a>
+            </li>
+            <br>
+        {% endfor %}
+        
+    </ul>
+{% endblock %}
+
+
